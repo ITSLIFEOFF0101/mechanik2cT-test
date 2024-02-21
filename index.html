@@ -7,27 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="login-form">
-    <form id="auth-form">
-        <h2>Login</h2>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
-</div>
-
 <div class="container">
     <div id="author-info" style="font-weight: bold">Autor: Andrii Kondratiuk (It's Life), Klasa: 2cT, Grupa: 1</div>
     <h2>Files:</h2>
     <div id="fileTree" class="file-tree">
         <ul>
-<li class="folder closed">
+            <li class="folder closed">
                 <span>📁 Podstawy</span>
                 <ul style="display: none;">
                     <li class="file">
@@ -168,6 +153,24 @@
         </ul>
     </div>
 </div>
+
+<!-- Модальное окно для авторизации -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="login-form">
+            <h2>Авторизация</h2>
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Войти">
+        </form>
+    </div>
+</div>
+
+<!-- Кнопка для открытия модального окна авторизации -->
+<button id="login-btn">Войти</button>
 
 <script src="script.js"></script>
 </body>
