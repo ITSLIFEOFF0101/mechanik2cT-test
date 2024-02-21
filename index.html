@@ -4,174 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📁 Web Cloud by It's Life</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .project-tree {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-tree li {
+            margin-bottom: 10px;
+        }
+
+        .project-tree ul {
+            padding-left: 20px;
+            display: none;
+        }
+
+        .project-tree span {
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .project-tree span:hover {
+            text-decoration: underline;
+        }
+
+        .project-tree li.folder.open > ul {
+            display: block;
+        }
+
+        .project-tree li.folder.open > span::before {
+            content: "📂 ";
+        }
+
+        .project-tree li.file > span::before {
+            content: "📄 ";
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <div id="author-info" style="font-weight: bold">Autor: Andrii Kondratiuk (It's Life), Klasa: 2cT, Grupa: 1</div>
-    <h2>Files:</h2>
-    <div id="fileTree" class="file-tree">
-        <ul>
-            <li class="folder closed">
-                <span>📁 Podstawy</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/1. podstawy/podstawowe znaczki.html">1. 📖 Podstawowe znaczki</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/1. podstawy/skielet strony.html">2. 📖 Skielet strony</a>
-                    </li>
+    <header>
+        <h1>🌳 Projects</h1>
+    </header>
+    <main class="content">
+        <ul class="project-tree">
+            <li class="folder">
+                <span>Podstawy</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/1. podstawy/podstawowe znaczki.html">Podstawowe znaczki</a></li>
+                    <li class="file"><a href="Strony 1/1. podstawy/skielet strony.html">Skielet strony</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Grafika</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/2. grafika/index.html">📖 Index</a>
-                    </li>
-                    <li class="folder closed">
-                        <span>📁 Strony</span>
-                        <ul style="display: none;">
-                            <li class="file">
-                                <a href="Strony 1/2. grafika/strony/strona1.html">📖 Strona_1</a>
-                            </li>
-                            <li class="file">
-                                <a href="Strony 1/2. grafika/strony/strona2.html">📖 Strona_2</a>
-                            </li>
-                            <li class="folder closed">
-                                <span>📁 Inne</span>
-                                <ul style="display: none;">
-                                    <li class="file">
-                                        <a href="Strony 1/2. grafika/strony/inne/strona3.html">📖 Strona_3</a>
-                                    </li>
+            <li class="folder">
+                <span>Grafika</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/2. grafika/index.html">Index</a></li>
+                    <li class="folder">
+                        <span>Strony</span>
+                        <ul>
+                            <li class="file"><a href="Strony 1/2. grafika/strony/strona1.html">Strona_1</a></li>
+                            <li class="file"><a href="Strony 1/2. grafika/strony/strona2.html">Strona_2</a></li>
+                            <li class="folder">
+                                <span>Inne</span>
+                                <ul>
+                                    <li class="file"><a href="Strony 1/2. grafika/strony/inne/strona3.html">Strona_3</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Milosz</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/3. Strona3_Milosz/index.html">📖 Indeks</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/3. Strona3_Milosz/ojczyzna.html">📖 Ojczyzna</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/3. Strona3_Milosz/slonce.html">📖 Słonce</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/3. Strona3_Milosz/upadek.html">📖 Upadek</a>
-                    </li>
+            <li class="folder">
+                <span>Milosz</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/3. Strona3_Milosz/index.html">Indeks</a></li>
+                    <li class="file"><a href="Strony 1/3. Strona3_Milosz/ojczyzna.html">Ojczyzna</a></li>
+                    <li class="file"><a href="Strony 1/3. Strona3_Milosz/slonce.html">Słonce</a></li>
+                    <li class="file"><a href="Strony 1/3. Strona3_Milosz/upadek.html">Upadek</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Tabele</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/4. tabele/tabele.html">📖 Tabele</a>
-                    </li>
+            <li class="folder">
+                <span>Tabele</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/4. tabele/tabele.html">Tabele</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Span i Div</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/5. span i div/span i div.html">📖 &lt;span&gt; i &lt;div&gt;</a>
-                    </li>
+            <li class="folder">
+                <span>Span i Div</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/5. span i div/span i div.html">Span i Div</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Formularze</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/6. formularze/ankieta.html">📖 Ankieta</a>
-                    </li>
+            <li class="folder">
+                <span>Formularze</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/6. formularze/ankieta.html">Ankieta</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 Znaki Specjalne</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/7. znaki specjalne/znaki.html">📖 Znaki</a>
-                    </li>
+            <li class="folder">
+                <span>Znaki Specjalne</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/7. znaki specjalne/znaki.html">Znaki</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 CSS Wpisany</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/ankieta.html">📖 Ankieta</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/czionka.html">📖 Czcionka</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/kolory.html">📖 Kolory</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/obrazek w tekscie.html">📖 Obr. w tekscie</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/tecza.html">📖 Tęcza</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/8. CSS/tlo.html">📖 Tło</a>
-                    </li>
+            <li class="folder">
+                <span>CSS Wpisany</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/8. CSS/ankieta.html">Ankieta</a></li>
+                    <li class="file"><a href="Strony 1/8. CSS/czionka.html">Czcionka</a></li>
+                    <li class="file"><a href="Strony 1/8. CSS/kolory.html">Kolory</a></li>
+                    <li class="file"><a href="Strony 1/8. CSS/obrazek w tekscie.html">Obr. w tekscie</a></li>
+                    <li class="file"><a href="Strony 1/8. CSS/tecza.html">Tęcza</a></li>
+                    <li class="file"><a href="Strony 1/8. CSS/tlo.html">Tło</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 CSS Osadzony</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/9. CSS - Osadzony/Własne czwiczenie.html">📖 Własne czwiczenie</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/9. CSS - Osadzony/brzechwa.html">📖 Brzechwa</a>
-                    </li>
+            <li class="folder">
+                <span>CSS Osadzony</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/9. CSS - Osadzony/Własne czwiczenie.html">Własne czwiczenie</a></li>
+                    <li class="file"><a href="Strony 1/9. CSS - Osadzony/brzechwa.html">Brzechwa</a></li>
                 </ul>
             </li>
-            <li class="folder closed">
-                <span>📁 CSS Wewnętrzny</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <a href="Strony 1/10. CSS/brzechwa.html">📖 Brzechwa</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/10. CSS/styl_zew.html">📖 Styl zewnętrzny</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/10. CSS/style.css">📃 Style.css</a>
-                    </li>
-                    <li class="file">
-                        <a href="Strony 1/10. CSS/style2.css">📃 Style2.css</a>
-                    </li>
+            <li class="folder">
+                <span>CSS Wewnętrzny</span>
+                <ul>
+                    <li class="file"><a href="Strony 1/10. CSS/brzechwa.html">Brzechwa</a></li>
+                    <li class="file"><a href="Strony 1/10. CSS/styl_zew.html">Styl zewnętrzny</a></li>
+                    <li class="file"><a href="Strony 1/10. CSS/style.css">Style.css</a></li>
+                    <li class="file"><a href="Strony 1/10. CSS/style2.css">Style2.css</a></li>
                 </ul>
             </li>
         </ul>
-    </div>
+    </main>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const folders = document.querySelectorAll('.folder span');
 
-<!-- Модальное окно для авторизации -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <form id="login-form">
-            <h2>Авторизация</h2>
-            <label for="username">Логин:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <input type="submit" value="Войти">
-        </form>
-    </div>
-</div>
-
-<!-- Кнопка для открытия модального окна авторизации -->
-<button id="login-btn">Войти</button>
-
-<script src="script.js"></script>
+        folders.forEach(function (folder) {
+            folder.addEventListener('click', function () {
+                const nestedList = folder.parentElement.querySelector('ul');
+                folder.parentElement.classList.toggle('open');
+                nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    });
+</script>
 </body>
 </html>
