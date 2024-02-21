@@ -65,3 +65,56 @@ function getClientIp() {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// Начало кода добавленного мной
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const loginBtn = document.getElementById('login-btn');
+    const closeBtn = document.querySelector('.close');
+    const loginForm = document.getElementById('login-form');
+
+    // Открытие модального окна при нажатии на кнопку "Войти"
+    loginBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+
+    // Закрытие модального окна при нажатии на крестик
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Закрытие модального окна при клике вне его области
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Обработка отправки формы
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Проверка логина и пароля
+        if (username === 'Lenovo' && password === 'zaq1"SX') {
+            // Вывод сообщения об успешной авторизации
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Авторизация успешна!';
+            successMessage.style.color = 'green';
+            loginForm.appendChild(successMessage);
+
+            // Закрытие модального окна через 3 секунды
+            setTimeout(function() {
+                modal.style.display = 'none';
+            }, 3000);
+        } else {
+            // Вывод сообщения об ошибке авторизации
+            const errorMessage = document.createElement('div');
+            errorMessage.textContent = 'Неправильный логин или пароль';
+            errorMessage.style.color = 'red';
+            loginForm.appendChild(errorMessage);
+        }
+    });
+});
